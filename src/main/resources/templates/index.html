@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculadora cienfitica</title>
+  <style>
+    .calculadora {
+      display: grid;
+      grid-template-columns: repeat(4, 60px);
+      grid-template-rows: repeat(5, 60px);
+      gap: 10px;
+      width: max-content;
+      margin: 50px auto;
+    }
+    .calculadora input[type="text"] {
+      grid-column: span 4;
+      height: 60px;
+      font-size: 24px;
+      text-align: right;
+      padding: 0 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+    .calculadora input[type="button"] {
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      background-color: #f0f0f0;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .calculator input[type="button"]:hover {
+      background-color: #d0d0d0;
+    }
+  </style>
+</head>
+<body>
+<h1>Calculadora cientifica</h1>
+<hr>
+<hr>
+<div class="calculadora">
+  <input type="text" id="display" name="display" readonly>
+  <input type="button" value="7" onclick="agregar(7)">
+  <input type="button" value="8" onclick="agregar(8)">
+  <input type="button" value="9" onclick="agregar(9)">
+  <input type="button" value="+" onclick="agregar('+')">
+  <input type="button" value="4" onclick="agregar(4)">
+  <input type="button" value="5" onclick="agregar(5)">
+  <input type="button" value="6" onclick="agregar(6)">
+  <input type="button" value="-" onclick="agregar('-')">
+  <input type="button" value="1" onclick="agregar(1)">
+  <input type="button" value="2" onclick="agregar(2)">
+  <input type="button" value="3" onclick="agregar(3)">
+  <input type="button" value="*" onclick="agregar('*')">
+  <input type="button" value="0" onclick="agregar(0)">
+  <input type="button" value="." onclick="agregar('.')">
+  <input type="button" value="=" onclick="calcularResultado()">
+  <input type="button" value="/" onclick="agregar('/')">
+  <input type="button" value="C" onclick="limpiarDisplay()">
+  <input type="button" value="√" onclick="calcularRaiz()">
+  <input type="button" value="x^n" onclick="prepararPotencia()">
+  <input type="button" value="log" onclick="calcularLogaritmo()">
+</div>
+</body>
+<script src="/assets/js/calculadora-cientifica.js"> </script>
+</html>
